@@ -1,0 +1,417 @@
+/* ===================================================
+   Banco de la Nación - Multired Virtual | Login
+   =================================================== */
+
+/* --- Reset --- */
+html, body, div, span, h1, p, a, em, img, b, ul, li, form, label {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  text-decoration: none;
+  vertical-align: text-top;
+}
+body {
+  line-height: 1;
+}
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: "";
+}
+
+/* --- Fuentes personalizadas --- */
+@font-face {
+  font-family: "daxcompact-boldregular";
+  src: url("assets/fonts/daxcompact-boldregular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "daxcompact-mediumregular";
+  src: url("assets/fonts/daxcompact-mediumregular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* --- Listas --- */
+ul {
+  list-style-type: none;
+}
+ul li {
+  color: #ce0202;
+  font-size: 11px;
+}
+
+/* --- Layout principal --- */
+body {
+  background: url("assets/img/body-bg.jpeg") repeat-x top left #f0f0f0;
+  color: #121212;
+  font-family: "arial", sans-serif;
+  overflow-x: hidden;
+  position: relative;
+  text-align: left;
+  margin: 0 auto;
+}
+
+#contenedor {
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  width: 998px;
+}
+
+/* --- Cabecera --- */
+#cabecera {
+  height: 90px;
+  position: relative;
+}
+#cabecera #logo-multired {
+  left: 0;
+  position: absolute;
+  top: 10px;
+}
+#cabecera #logo-bn {
+  right: 0;
+  position: absolute;
+  top: 33px;
+}
+
+/* --- Cuerpo --- */
+#cuerpo {
+  margin: 0 auto;
+  padding: 20px 0 0;
+  position: relative;
+  width: 905px;
+}
+#cuerpo h1 {
+  color: #343434;
+  font: 24px "daxcompact-mediumregular";
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+#cuerpo h1 img {
+  margin: 0 12px 0 0;
+}
+#cuerpo h1 span {
+  color: #c21315;
+}
+
+/* --- Contenedor login --- */
+#login #login-contenido {
+  background: url("assets/img/login-contenido-bg.png") repeat-y right top #fff;
+  border-left: 1px solid #d4d4d4;
+  color: #555555;
+  font: 12px arial, sans-serif;
+  margin: 0 auto;
+  position: relative;
+  padding: 18px 54px 10px 52px;
+  overflow: hidden;
+  text-align: left;
+  width: 536px;
+}
+#login #login-contenido #border-inferior {
+  border-bottom: 1px dashed #b8b8b8;
+  bottom: 55px;
+  height: 1px;
+  position: absolute;
+  left: 0;
+  width: 99%;
+}
+#login #login-contenido p {
+  text-align: justify;
+}
+
+/* --- Formulario --- */
+#login #login-contenido form {
+  padding: 0 0 0 60px;
+  position: relative;
+}
+#login #login-contenido form .fila {
+  margin: 0 0 15px 0;
+}
+#login #login-contenido form label {
+  color: #4f4f4f;
+  font: 13px/23px arial, sans-serif;
+  float: left;
+  text-align: right;
+  padding: 0 4px 0 0;
+  width: 130px;
+}
+
+/* Botón ingresar */
+#login #login-contenido form input[type="button"] {
+  background: url("assets/img/btn-ingresar.jpeg") no-repeat;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  height: 30px;
+  font: bold 14px arial, sans-serif;
+  margin: 38px 0 0 160px;
+  text-align: center;
+  width: 100px;
+}
+
+/* Selector tipo documento */
+#login #login-contenido form .tipo-documento {
+  background: url("assets/img/select-tipo-documento.jpeg") no-repeat;
+  height: 23px !important;
+  float: left;
+  width: 250px !important;
+}
+#login #login-contenido form .tipo-documento span {
+  color: #4f4f4f;
+  font: 12px/23px arial, sans-serif !important;
+  padding: 0 0 0 12px;
+}
+
+/* Selector mediano */
+#login #login-contenido form .select-medio {
+  background: url("assets/img/select-medio.jpeg") no-repeat;
+  color: #4f4f4f;
+  float: left;
+  height: 20px;
+  padding: 5px 0 0 10px;
+  margin: 0 10px 0 0;
+  width: 115px !important;
+}
+
+/* Input texto pequeño */
+#login #login-contenido form .input-chico3 {
+  background: url("assets/img/input-texto-chico.jpeg") no-repeat scroll 0% 0% transparent;
+  border: medium none;
+  font: 12px/23px arial, sans-serif;
+  height: 23px;
+  float: left;
+  padding: 0 10px;
+  color: #4f4f4f;
+}
+
+/* Input grande (tarjeta / DNI) */
+#login #login-contenido form input.grande {
+  background: url("assets/img/input-grande.jpeg") no-repeat;
+  border: none;
+  float: left;
+  color: #4f4f4f;
+  font: 12px/23px arial, sans-serif;
+  padding: 0 12px;
+  border-radius: 8px;
+  height: 23px;
+  width: 226px;
+}
+
+/* --- Teclado virtual --- */
+#login #login-contenido #botones-clave {
+  float: left;
+  padding: 0 0 0 6px;
+  width: 92px;
+  user-select: none;
+}
+#login #login-contenido #botones-clave div {
+  background: url("assets/img/boton-clave.jpeg") no-repeat;
+  color: #343434;
+  display: block;
+  font: 16px/25px "daxcompact-boldregular";
+  height: 25px;
+  float: left;
+  margin: 0 5px 5px 0;
+  text-align: center;
+  width: 25px;
+  cursor: pointer;
+}
+#login #login-contenido #botones-clave div:hover {
+  background: url("assets/img/boton-clave-hover.jpeg") no-repeat;
+  color: #fff;
+}
+#login #login-contenido #botones-clave div.limpiar {
+  background: url("assets/img/boton-limpiar.jpeg") no-repeat;
+  color: #fff;
+  font: 12px/25px "daxcompact-boldregular";
+  width: 55px;
+}
+
+/* --- Campo clave --- */
+#login #login-contenido #campo-clave {
+  float: left;
+  padding: 0 0 0 25px;
+  width: 120px;
+}
+#login #login-contenido #campo-clave p {
+  color: #4f4f4f;
+  font: 11px/13px arial, sans-serif;
+  text-align: center;
+  padding: 0 0 10px;
+}
+#login #login-contenido #campo-clave input {
+  background: url("assets/img/sf-img-22.jpeg") no-repeat;
+  border: none;
+  height: 23px;
+  padding: 0 20px;
+  width: 70px;
+  border-radius: 8px;
+  color: #4f4f4f;
+}
+
+/* Olvidé mi clave */
+#login #login-contenido #campo-clave .olvido-clave {
+  padding: 20px 0 0 0;
+  position: relative;
+}
+#login #login-contenido #campo-clave div.olvide-clave {
+  background: url("assets/img/olvide-clave.jpeg") no-repeat;
+  color: #ba1113;
+  display: block;
+  height: 24px;
+  font: 12px/24px arial, sans-serif;
+  text-align: left;
+  text-decoration: underline;
+  padding: 0 0 0 27px;
+  cursor: pointer;
+}
+
+/* --- Captcha --- */
+#login #login-contenido .capcha {
+  float: left;
+  padding: 0 18px 0 6px;
+}
+#login #login-contenido .capcha #srcCaptcha {
+  padding: 0 0 8px 0;
+}
+#login #login-contenido .capcha .boton_captcha {
+  background: url("assets/img/cambiar-captcha.jpeg") no-repeat;
+  color: #ba1113;
+  display: block;
+  font: 12px arial, sans-serif;
+  text-decoration: underline;
+  padding: 3px 0 2px 22px;
+  cursor: pointer;
+}
+#login #login-contenido input.capcha {
+  background: url("assets/img/sf-img-22.jpeg") no-repeat scroll 0 0 transparent;
+  border: medium none;
+  color: #4f4f4f;
+  float: left;
+  font: 12px/23px arial, sans-serif;
+  height: 23px;
+  padding: 0 25px;
+  border-radius: 8px;
+  width: 60px;
+  text-transform: uppercase;
+}
+
+/* --- Mensaje de error --- */
+.cysErrorMsg {
+  background-color: #ffd5d5;
+  border: 1px solid #ff3c3c;
+  color: #4f4f4f;
+  font: 12px arial, sans-serif;
+  list-style: none outside none;
+  display: block;
+  margin: 12px auto 10px;
+  padding: 8px 16px;
+  width: 70%;
+  text-align: center;
+  clear: both;
+  box-sizing: border-box;
+}
+
+/* --- Pie de página --- */
+#pie-pagina {
+  text-align: center;
+  padding: 60px 0 65px 0;
+  width: 100%;
+}
+#pie-pagina #titulo-pie-pagina {
+  color: #373737;
+  font: bold 12px arial, sans-serif;
+  padding: 0 0 8px 0;
+}
+#pie-pagina #oficinas {
+  color: #5e5e5f;
+  font: 11px arial, sans-serif;
+}
+
+/* --- Utilidades --- */
+.limpiar::after {
+  content: ".";
+  display: block;
+  height: 0;
+  font-size: 0;
+  clear: both;
+  visibility: hidden;
+}
+.limpiar {
+  display: block;
+}
+ul.tipo-documento {
+  width: 217px !important;
+}
+
+/* --- UI Selectmenu (jQuery UI) --- */
+.ui-state-default {
+  border: none;
+}
+.ui-state-default a:link,
+.ui-state-default a:visited {
+  color: #eeeeee;
+  text-decoration: none;
+  outline: none;
+}
+.ui-state-hover a:hover {
+  color: #373737;
+  text-decoration: underline;
+  outline: none;
+}
+.ui-selectmenu {
+  display: block;
+  position: relative;
+  margin: 0;
+  text-decoration: none;
+  overflow: hidden;
+}
+.ui-selectmenu-icon {
+  position: absolute;
+  right: 6px;
+  margin-top: -8px;
+  top: 50%;
+}
+.ui-selectmenu-menu {
+  list-style: none;
+  position: absolute;
+  visibility: hidden;
+  overflow: auto;
+  background: #ebebeb;
+}
+.ui-selectmenu-menu-dropdown {
+  z-index: 35;
+  margin: 0;
+  padding: 0 5px 5px 5px;
+  font: 12px/18px "arial", sans-serif;
+  border-left: 1px solid #bdbdbd;
+  border-right: 1px solid #bdbdbd;
+  border-bottom: 1px solid #bdbdbd;
+}
+.ui-selectmenu-menu li {
+  padding: 1px 0 0 12px;
+  margin: 0;
+  display: block;
+  border-top: 1px dotted transparent;
+  border-bottom: 1px dotted transparent;
+  border-right-width: 0 !important;
+  border-left-width: 0 !important;
+  font-weight: normal !important;
+}
+.ui-selectmenu-menu li a,
+.ui-selectmenu-status {
+  line-height: 1.4em;
+  display: block;
+  outline: none;
+  text-decoration: none;
+  color: #484848;
+  font: 12px arial, sans-serif;
+}
+.ui-selectmenu-status {
+  line-height: 1.4em;
+}

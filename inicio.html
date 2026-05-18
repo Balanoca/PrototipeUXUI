@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Language" content="es">
+  <title>Banco de la Nación - Multired Virtual</title>
+  <link rel="stylesheet" href="inicio.css">
+</head>
+<body>
+
+  <div id="contenedor">
+
+    <!-- ===== Cabecera ===== -->
+    <div id="cabecera">
+      <div id="logo-multired">
+        <img src="assets/img/logo-multired.jpeg" alt="Logotipo Multired">
+      </div>
+      <div id="logo-bn">
+        <img src="assets/img/logo-bn.jpeg" alt="Logotipo del Banco de la Nación">
+      </div>
+    </div>
+
+    <!-- ===== Cuerpo ===== -->
+    <div id="cuerpo">
+
+      <h1>
+        <img src="assets/img/candado.png" alt="">
+        <p class="dax">Usted se encuentra en una <span>zona segura</span></p>
+      </h1>
+
+      <!-- Cerrar sesión -->
+      <div id="cerrar-sesion">
+        <a href="index.html" title="Cerrar Sesión">CERRAR SESIÓN &nbsp;✕</a>
+      </div>
+
+      <!-- ===== Sección principal ===== -->
+      <div id="bienvenidos">
+        <div id="bienvenidos-contenido">
+
+          <!-- Barra de datos del cliente -->
+          <div id="datos-personales" class="limpiar">
+
+            <div id="nombres">
+              <p style="float:left; margin-top:30px; margin-right:10px;" class="dax">
+                <span>CLIENTE: </span>ALANOCA CACHI BRAYAN OMAR
+              </p>
+              <div id="cont_sello_seguridad">
+                <img src="assets/img/sello-seguridad.png" alt="Sello de Seguridad" width="58" height="58">
+              </div>
+            </div>
+
+            <div id="seleccion-monto">
+              <p>Monto Límite Diario</p>
+              <p>Por Cliente</p>
+              <p><span>S/ 10,000.00</span></p>
+            </div>
+
+            <div id="ultimo-ingreso">
+              <p>Último ingreso</p>
+              <p><span>Fecha:</span> 17/05/2026</p>
+              <p><span>Hora:</span> 07:48:32 PM</p>
+            </div>
+
+            <div id="tipo-cambio">
+              <p>Tipo de cambio</p>
+              <p><span>Compra:</span> 3.4000</p>
+              <p><span>Venta:</span> 3.4600</p>
+            </div>
+
+          </div><!-- /#datos-personales -->
+
+          <!-- Contenidos con menú + sección central -->
+          <div id="bn-contenidos" class="limpiar">
+
+            <!-- ===== Menú lateral izquierdo ===== -->
+            <div id="menu-internas">
+              <div id="navegacion">
+
+                <!-- 1. Inicio -->
+                <div class="accordionButton dax">
+                  <a title="Inicio" href="#" data-panel="panel-inicio">Inicio</a>
+                </div>
+
+                <!-- 2. Transferencias -->
+                <div class="accordionButton dax has-children">
+                  <a title="Transferencias" href="#">Transferencias</a>
+                </div>
+                <div class="accordionContent">
+                  <a title="Mismo Banco" href="#">Mismo Banco</a>
+                  <a title="Interbancarias" href="#" class="has-sub">Interbancarias</a>
+                  <div class="accordionContent1">
+                    <a style="padding-left:50px;" title="Inmediatas" href="#">Inmediatas</a>
+                    <a style="padding-left:50px;" title="Diferidas" href="#">Diferidas</a>
+                  </div>
+                </div>
+
+                <!-- 3. Transferir a celular -->
+                <div class="accordionButton dax">
+                  <a title="Transferir a celular" href="#">
+                    Transferir a celular
+                    <label class="menu-nuevo">NUEVO</label>
+                  </a>
+                </div>
+
+                <!-- 4. Pagos -->
+                <div class="accordionButton dax has-children">
+                  <a title="Pagos" href="#">Pagos</a>
+                </div>
+                <div class="accordionContent">
+                  <a title="Tarjeta de Crédito Otros Bancos" href="#" class="has-sub">Tarjeta de Crédito Otros Bancos</a>
+                  <div class="accordionContent1">
+                    <a style="padding-left:50px;" title="Inmediatas" href="#" data-panel="panel-pago-inmediato">Inmediatas</a>
+                    <a style="padding-left:50px;" title="Diferidas" href="#">Diferidas</a>
+                  </div>
+                  <a title="Tarjeta de Crédito BN" href="#" class="has-sub">Tarjeta de Crédito BN</a>
+                  <div class="accordionContent1">
+                    <a style="padding-left:50px;" title="Mismo Titular" href="#">Mismo Titular</a>
+                    <a style="padding-left:50px;" title="Terceros" href="#">Terceros</a>
+                  </div>
+                  <a title="Servicios" href="#" data-panel="panel-servicios">Servicios</a>
+                </div>
+
+                <!-- 5. Opciones de Seguridad -->
+                <div class="accordionButton dax has-children">
+                  <a title="Opciones de Seguridad" href="#">Opciones de Seguridad</a>
+                </div>
+                <div class="accordionContent">
+                  <a title="Transferencia a Contacto" href="#">Transferencia a Contacto</a>
+                  <a title="Configurar tarjetas" href="#">Configurar tarjetas</a>
+                  <a title="Clave Internet" href="#" class="has-sub">Clave Internet</a>
+                  <div class="accordionContent1">
+                    <a style="padding-left:50px;" title="Cambio" href="#">Cambio</a>
+                    <a style="padding-left:50px;" title="Desafiliación" href="#">Desafiliación</a>
+                  </div>
+                  <a title="Clave Dinámica Digital" href="#">Clave Dinámica Digital</a>
+                  <a title="Token Físico" href="#" class="has-sub">Token Físico</a>
+                  <div class="accordionContent1">
+                    <a style="padding-left:50px;" title="Activación" href="#">Activación</a>
+                    <a style="padding-left:50px;" title="Bloqueo" href="#">Bloqueo</a>
+                  </div>
+                  <a title="Sello de Seguridad" href="#" class="has-sub">Sello de Seguridad</a>
+                  <div class="accordionContent1">
+                    <a style="padding-left:50px;" title="Generación" href="#">Generación</a>
+                    <a style="padding-left:50px;" title="Cambio" href="#">Cambio</a>
+                  </div>
+                </div>
+
+                <!-- 6. Bloqueo Tarjeta Multired -->
+                <div class="accordionButton dax">
+                  <a title="Bloqueo Tarjeta Multired" href="#">Bloqueo Tarjeta Multired</a>
+                </div>
+
+                <!-- 7. Actualizacion de Datos -->
+                <div class="accordionButton dax">
+                  <a title="Actualizacion de Datos" href="#">Actualizacion de Datos</a>
+                </div>
+
+                <!-- 8. Estados de Cuenta -->
+                <div class="accordionButton dax has-children">
+                  <a title="Estados de Cuenta" href="#">Estados de Cuenta</a>
+                </div>
+                <div class="accordionContent">
+                  <a title="Elección Medio de Envío" href="#">Elección Medio de Envío</a>
+                </div>
+
+              </div><!-- /#navegacion -->
+
+              <!-- Bloqueo de tarjetas -->
+              <div id="bloqueo-tarjetas">
+                <div class="titulo-bloqueo-tarjetas">
+                  <div>BLOQUEO DE TARJETAS</div>
+                  <div><span>24 HORAS</span></div>
+                </div>
+                <div class="linea-telefonica">
+                  <div>LÍNEA TELEFÓNICA</div>
+                  <div class="telefono">440-5305</div>
+                  <div class="telefono">442-4470</div>
+                  <div style="margin-top:6px;">LÍNEA GRATUITA</div>
+                  <div class="telefono">0 800-10 700</div>
+                </div>
+              </div>
+
+            </div><!-- /#menu-internas -->
+
+            <!-- ===== Contenidos informativos ===== -->
+            <div id="contenidos-informativos">
+
+              <!-- PANEL: Inicio (default) -->
+              <div class="panel" id="panel-inicio">
+                <div id="banner-transferencia">
+                  <img src="assets/img/banner-transferencia.jpeg" alt="Transfiere de celular a celular" height="50">
+                  <p>Transfiere de celular a celular.</p>
+                  <a href="#">Hazlo aquí</a>
+                </div>
+                <h2>BIENVENIDO/A</h2>
+                <p>
+                  A través de Multired Virtual, Usted podrá realizar operaciones con cargo a su cuenta de ahorros
+                  y CTS (Tarjeta Multired Global Débito), afiliaciones a Débito automático o realizar consultas
+                  como cliente de cuenta de ahorros, cuenta corriente, CTS, préstamos Multired o Débito automático,
+                  accediendo desde la comodidad de su hogar, empresa o cualquier lugar con acceso a Internet.
+                </p>
+                <div id="cuenta-ahorros">
+                  <table class="table-cuentas">
+                    <tbody>
+                      <tr><td colspan="4" class="tituloTabla">CUENTAS DE AHORRO</td></tr>
+                      <tr>
+                        <td class="tituloCelda"><strong>CUENTA</strong></td>
+                        <td class="tituloCelda"><strong>MONEDA</strong></td>
+                        <td class="tituloCelda"><strong>SALDO</strong></td>
+                        <td class="tituloCelda"><strong>DETALLES</strong></td>
+                      </tr>
+                      <tr>
+                        <td class="detalleCelda">04-057-458904</td>
+                        <td class="detalleCelda">Soles</td>
+                        <td class="detalleCelda">1,287.70</td>
+                        <td class="detalleCelda">
+                          <select style="font:12px arial; padding:2px 4px;">
+                            <option>Seleccione...</option>
+                            <option>Estado de Cuenta</option>
+                            <option>Movimientos</option>
+                          </select>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div id="aviso-seguridad">
+                  <p>POR TU SEGURIDAD, SOLO PODRÁS REALIZAR OPERACIONES EN MULTIRED VIRTUAL</p>
+                  <p>USANDO LA CLAVE DINÁMICA DIGITAL O EL TOKEN FÍSICO.</p>
+                </div>
+              </div><!-- /#panel-inicio -->
+
+              <!-- PANEL: Pago Inmediato de Tarjeta de Crédito de Otro Banco -->
+              <div class="panel" id="panel-pago-inmediato" style="display:none;">
+                <h2>PAGO INMEDIATO DE TARJETA DE CREDITO DE OTRO BANCO</h2>
+
+                <!-- ── PASO 1: Formulario de ingreso ── -->
+                <div id="pago-paso1">
+                  <p style="width:auto; text-align:justify; padding:10px 0 16px;">
+                    Estimado cliente, en el campo "Tarjeta de Crédito" deberá escoger entre las alternativas:
+                    "Frecuentes", si ya tiene registrado el número de tarjeta que desea pagar, o "Nuevo",
+                    si aun no lo ha registrado.
+                  </p>
+
+                  <form class="formEstandar" name="frmPago">
+                    <!-- Cuenta Origen -->
+                    <div class="fila-form limpiar">
+                      <span class="label-form">Cuenta Origen:</span>
+                      <div class="campo-form">
+                        <select class="select-cuenta" id="pago-cuenta-origen">
+                          <option value="">Seleccione...</option>
+                          <option value="04-057-458904">Cta. Ahorros - S/ - 04-057-458904</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <!-- Tarjetas de Crédito -->
+                    <div class="fila-form limpiar">
+                      <span class="label-form">Tarjetas de Crédito:</span>
+                      <div class="campo-form">
+                        <label class="radio-label">
+                          <input type="radio" name="tipoTarjeta" id="radio-frecuentes" value="frecuentes" checked> Frecuentes
+                        </label>
+                        <label class="radio-label" style="margin-left:20px;">
+                          <input type="radio" name="tipoTarjeta" id="radio-nuevo" value="nuevo"> Nuevo
+                        </label>
+                      </div>
+                    </div>
+
+                    <!-- Campo solo para FRECUENTES -->
+                    <div id="campos-frecuentes">
+                      <div class="fila-form limpiar">
+                        <span class="label-form">Seleccione Frecuente:</span>
+                        <div class="campo-form">
+                          <select class="select-cuenta" id="pago-frecuente">
+                            <option value="">Seleccione...</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Campos solo para NUEVO -->
+                    <div id="campos-nuevo" style="display:none;">
+                      <div class="fila-form limpiar">
+                        <span class="label-form">Banco Destino:</span>
+                        <div class="campo-form">
+                          <select class="select-cuenta" id="pago-banco-destino">
+                            <option value="">Seleccione...</option>
+                            <option value="BBVA">BBVA</option>
+                            <option value="BCP">BCP</option>
+                            <option value="Interbank">Interbank</option>
+                            <option value="Scotiabank">Scotiabank</option>
+                            <option value="Pichincha">Pichincha</option>
+                            <option value="Mibanco">Mibanco</option>
+                            <option value="BanBif">BanBif</option>
+                            <option value="Financiero">Financiero</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="fila-form limpiar">
+                        <span class="label-form">Nro. de Tarjeta:</span>
+                        <div class="campo-form">
+                          <input type="text" id="pago-nro-tarjeta" class="input-form-texto" maxlength="16" placeholder="0000000000000000">
+                        </div>
+                      </div>
+                      <div class="fila-form limpiar">
+                        <span class="label-form">Correo Electrónico:</span>
+                        <div class="campo-form">
+                          <input type="text" id="pago-correo" class="input-form-texto input-form-largo" placeholder="">
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Nota -->
+                    <div class="fila-form limpiar" style="margin-top:8px;">
+                      <span class="label-form"></span>
+                      <p class="nota-form">
+                        (*) Se permiten sólo los caracteres alfabéticos mayúsculas y minúsculas (A-Z, a-z)
+                        incluyendo el carácter blanco (el espaciado) y los caracteres '+' y '-', sin incluir
+                        la letra eñe. El resto de caracteres especiales no serán permitidos.
+                      </p>
+                    </div>
+
+                    <!-- Modal confirmación desafiliar -->
+                    <div id="modal-desafiliar" style="display:none;">
+                      <div class="modal-overlay"></div>
+                      <div class="modal-box">
+                        <p class="modal-texto">¿Seguro de que desea borrar esta tarjeta de tus operaciones frecuentes?</p>
+                        <div class="modal-botones">
+                          <input type="button" class="btn-accion btn-modal-confirmar" id="btn-confirmar-desafiliar" value="CONFIRMAR">
+                          <input type="button" class="btn-accion btn-modal-cancelar"  id="btn-cancelar-desafiliar"  value="CANCELAR">
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Línea divisoria -->
+                    <hr class="hr-form">
+
+                    <!-- Botones paso 1 -->
+                    <div class="botones-form">
+                      <input type="button" class="btn-accion btn-quitar" id="btn-quitar" value="DESAFILIAR TARJETA" disabled>
+                      <input type="button" class="btn-accion" id="btn-pago-continuar" value="CONTINUAR">
+                    </div>
+                  </form>
+                </div><!-- /#pago-paso1 -->
+
+                <!-- ── PASO 2: Confirmación ── -->
+                <div id="pago-paso2" style="display:none;">
+                  <form class="formEstandar" name="frmPagoConfirm">
+                    <!-- Resumen de datos -->
+                    <div class="fila-form limpiar">
+                      <span class="label-form">Nro. Cuenta Origen:</span>
+                      <div class="campo-form campo-valor" id="conf-cuenta"></div>
+                    </div>
+                    <div class="fila-form limpiar">
+                      <span class="label-form">Banco Destino:</span>
+                      <div class="campo-form campo-valor" id="conf-banco"></div>
+                    </div>
+                    <div class="fila-form limpiar">
+                      <span class="label-form">Nro. Tarjeta Crédito:</span>
+                      <div class="campo-form campo-valor" id="conf-tarjeta"></div>
+                    </div>
+                    <div class="fila-form limpiar">
+                      <span class="label-form">Moneda:</span>
+                      <div class="campo-form">
+                        <select class="select-cuenta select-corto" id="conf-moneda">
+                          <option value="Soles">Soles</option>
+                          <option value="Dólares">Dólares</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="fila-form limpiar">
+                      <span class="label-form">Importe:</span>
+                      <div class="campo-form">
+                        <input type="text" class="input-form-texto input-form-corto" id="conf-importe" placeholder="">
+                      </div>
+                    </div>
+
+                    <!-- Términos y condiciones (ancho completo) -->
+                    <div class="terminos-bloque" style="margin-top:14px;">
+                      <div class="terminos-box terminos-full">
+                        <p><strong>Términos y condiciones generales para TRANSFERENCIAS INTERBANCARIAS INMEDIATAS:</strong></p>
+                        <p>1. EL CLIENTE declara conocer y aceptar los Términos y Condiciones del Servicio de Transferencias Interbancarias Inmediatas e Interoperabilidad (Transferencias Interbancarias a CCI y números de celulares, y Pago de Tarjeta de Crédito de Otros Bancos), en adelante EL SERVICIO, explicado y detallado en los numerales siguientes.</p>
+                        <p>2. EL CLIENTE acepta que el Banco de la Nación, en adelante EL BANCO, no tiene ni asume ninguna responsabilidad por errores, abonos errados o demoras en el procesamiento de la Transferencia Interbancaria o Pago de Tarjeta de Crédito de Otro Banco ocasionados por: a) la información consignada por EL CLIENTE; b) las limitaciones tecnológicas de los equipos informáticos usados por EL CLIENTE.</p>
+                        <p>3. EL CLIENTE entiende que en EL SERVICIO, aparte de EL BANCO, también intervienen otras entidades (Entidades Financieras de destino y proveedores tecnológicos); por lo cual, EL CLIENTE reconoce y acepta que EL BANCO no asume ninguna responsabilidad por errores, demoras o falta de abono en el procesamiento de la Transferencia Interbancaria o Pago de Tarjeta de Crédito de Otro Banco por causas atribuibles a fallas en las comunicaciones o en los sistemas de las mismas.</p>
+                      </div>
+                      <label class="acepto-label">
+                        <input type="checkbox" id="chk-acepto"> Acepto condiciones
+                      </label>
+                    </div>
+
+                    <!-- Nota monto máximo -->
+                    <div class="terminos-bloque" style="margin-top:14px;">
+                      <p class="nota-form nota-form-full">
+                        El monto máximo acumulable diario por cliente para realizar sus operaciones es de S/10,000 ó su equivalente en dólares (Cta. Ahorros MN y ME respectivamente), no incluido comisión e ITF de ser el caso.
+                      </p>
+                    </div>
+
+                    <hr class="hr-form">
+
+                    <!-- Botones paso 2 -->
+                    <div class="botones-form">
+                      <input type="button" class="btn-accion btn-regresar" id="btn-pago-regresar" value="◄ REGRESAR">
+                      <input type="button" class="btn-accion" id="btn-pago-continuar2" value="CONTINUAR ►">
+                    </div>
+                  </form>
+                </div><!-- /#pago-paso2 -->
+
+              </div><!-- /#panel-pago-inmediato -->
+
+              <!-- PANEL: Pago de Servicios -->
+              <div class="panel" id="panel-servicios" style="display:none;">
+                <h2>PAGO DE SERVICIOS</h2>
+
+                <div id="servicios-buscador">
+                  <p class="servicios-hint">Escribe el nombre del servicio o empresa que deseas pagar:</p>
+                  <div class="servicios-input-wrap">
+                    <input type="text" id="servicios-input" placeholder="Ej: Electrolux, Claro, Sedapal..." autocomplete="off">
+                    <span class="servicios-lupa">&#128269;</span>
+                  </div>
+                  <ul id="servicios-resultados"></ul>
+                  <p class="servicios-vacio" id="servicios-vacio" style="display:none;">No se encontraron resultados para tu búsqueda.</p>
+                </div>
+
+                <!-- Pantalla de pago (se muestra al seleccionar empresa) -->
+                <div id="servicios-pago" style="display:none;">
+                  <div class="servicios-pago-header">
+                    <button id="servicios-volver" type="button">&#8592; Volver</button>
+                    <h3 id="servicios-empresa-nombre"></h3>
+                  </div>
+                  <form class="formEstandar" name="frmServicio">
+                    <div class="fila-form">
+                      <span class="label-form">Cuenta Origen:</span>
+                      <div class="campo-form">
+                        <select class="select-cuenta">
+                          <option>Seleccione...</option>
+                          <option>04-057-458904 - Soles</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="fila-form">
+                      <span class="label-form">N° Cliente / Referencia:</span>
+                      <div class="campo-form">
+                        <input type="text" class="servicios-input-dato" placeholder="Ingrese su número de cliente">
+                      </div>
+                    </div>
+                    <div class="fila-form">
+                      <span class="label-form">Importe (S/):</span>
+                      <div class="campo-form">
+                        <input type="text" class="servicios-input-dato" placeholder="0.00">
+                      </div>
+                    </div>
+                    <hr class="hr-form">
+                    <div class="botones-form">
+                      <input type="button" class="btn-accion btn-secundario" value="CANCELAR" id="btn-cancelar-servicio">
+                      <input type="button" class="btn-accion" value="CONTINUAR">
+                    </div>
+                  </form>
+                </div>
+
+              </div><!-- /#panel-servicios -->
+
+            </div><!-- /#contenidos-informativos -->
+
+          </div><!-- /#bn-contenidos -->
+
+        </div><!-- /#bienvenidos-contenido -->
+      </div><!-- /#bienvenidos -->
+
+      <!-- Pie de página -->
+      <div id="pie-pagina">
+        <div id="titulo-pie-pagina">Banco de la Nación | Ministerio de Economía y Finanzas</div>
+        <div id="oficinas">
+          <p>Oficina Principal: Av. Javier Prado Este 2499. San Borja. Central Telefónica: 519 2000.</p>
+          <p>Atención en Oficinas Administrativas: Lunes a Viernes de 08:30 a 17:30. Refrigerio de: 13:00-14:00.</p>
+          <p>Atención en Oficina de Trámite Documentario: Lunes a Viernes de 8:30 a 16:30 (horario corrido).</p>
+        </div>
+      </div>
+
+    </div><!-- /#cuerpo -->
+  </div><!-- /#contenedor -->
+
+  <script src="inicio.js"></script>
+</body>
+</html>
