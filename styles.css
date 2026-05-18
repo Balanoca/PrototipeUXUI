@@ -309,9 +309,9 @@ body {
   font: 12px arial, sans-serif;
   list-style: none outside none;
   display: block;
-  margin: 12px auto 10px;
+  margin: 10px auto;
   padding: 8px 16px;
-  width: 70%;
+  width: 536px;
   text-align: center;
   clear: both;
   box-sizing: border-box;
